@@ -1,0 +1,29 @@
+body {
+  background-color: #333333;
+  font-sze: 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-flow: wrap;
+  height: 1220px;
+  justify-content: center;
+  margin: auto;
+  width: 820px; }
+
+.mapbox {
+  height: 1200px;
+  width: 800px; }
+
+.marker {
+  display: block;
+  height: 32px;
+  width: 32px;
+  padding: 0; }
+
+.position {
+  font-family: adobe-hebrew, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.2rem; }

@@ -1,0 +1,39 @@
+$bg-color: #333333;
+$base-font-size: 14px;
+$Hebrew-font-family: adobe-hebrew,sans-serif;
+$En-font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+body {
+  background-color: $bg-color;
+  font-sze: $base-font-size;
+  font-family: $En-font-family;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-flow: wrap;
+  height: 1220px;
+  justify-content: center;
+  margin: auto;
+  width: 820px;
+}
+
+.mapbox {
+  height: 1200px;
+  width: 800px;
+}
+
+.marker {
+  display: block;
+  height: 32px;
+  width: 32px;
+  padding: 0;
+}
+
+.position {
+  font-family: $Hebrew-font-family;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
