@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Biblical Maps</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+   <!-- mapbox -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+    <!-- mapbox draw plugin -->
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.2.0/mapbox-gl-draw.css" type="text/css" />
+    <!-- Adobe Hebrew -->
+    <link rel="stylesheet" href="https://use.typekit.net/ict3gts.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="mapbox" id="map"></div>
+    <script>
+      mapboxgl.accessToken = "pk.eyJ1IjoibWFzYXJ1ayIsImEiOiJja2Uzc2pmMmswbTg0Mnptd2ZoYWNoYWVzIn0.g9kNcwqWh3_oHMvfhxjEEw";
+      var mapCenter = new mapboxgl.LngLat(35.18169944139052, 31.077452825009317);
+      var map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/streets-v11",
+        center: mapCenter,
+        zoom: 7,
+        pitchWithRotate: false,
+        dragRotate: false
+      });
+      map.on("load", function() {
+        map.scrollZoom.enable();
+        map.dragPan.enable();
+
+        var features = new Array();
+        $.getJSON("../data/geojson/Jim_map_Elijah.geojson", function( data ) {
+          var features = data.features;
+          features.forEach(function (marker) {
+            var el = document.createElement('div');
+            el.className = 'marker';
+            var par = document.createElement('p');
+            var img = document.createElement('img');
+            img.className = 'marker';
+            img.src = '../images/map-location-marker.png';
+            par.appendChild(img);
+            el.appendChild(par);
+            // el.style.backgroundImage = '../images/map-location-marker.png';
+            new mapboxgl.Marker(el)
+            .setLngLat(marker.geometry.coordinates)
+            .setPopup(new mapboxgl.Popup({offset: 25, closeButton: false, closeOnClick: false, closeOnMove: false})
+            .setHTML('<span class="position">' + marker.properties.name + '</span>'))
+            .addTo(map);
+          });
+        });
+      });
+      map.on('click', function(e){
+        console.log(e.lngLat);
+      });
+    </script>
+    </div>
+  </body>
+</html>

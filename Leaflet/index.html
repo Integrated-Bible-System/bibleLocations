@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="author" content="Masaru Kitajima">
+    <meta name="robots" content="noindex, nofollow">
+    <!-- Favicon -->
+    <link rel="icon" type="image/vnd.microsoft.icon" href="../images/icon/favicon.ico">
+    <link rel="apple-touch-icon" type="image/png" href="../images/icon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="../images/icon/icon-192x192.png">
+    <title>ここにタイトル</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <!-- Leflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="mapid" class="mapid"></div>
+        <script>
+            var mymap = L.map('mapid', {
+                center: [30.518313, 34.169197],
+                zoom: 8,
+                zoomControl: false
+            });
+
+            L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFzYXJ1ayIsImEiOiJja2Uzc2pmMmswbTg0Mnptd2ZoYWNoYWVzIn0.g9kNcwqWh3_oHMvfhxjEEw', {
+                maxZoom: 18,
+                id: 'mapbox/streets-v11',
+                tileSize: 512,
+                zoomOffset: -1
+            }).addTo(mymap);
+
+            var pinIcon = L.icon({
+                iconUrl: '../images/map-location-marker.png'
+            });
+            //L.marker([28.539722, 33.973333], {icon: pinIcon}, {title: 'Mt. Sinai'}).addTo(mymap);
+                        var geojsonMarkerOptions = {
+                                icon: pinIcon,
+                            }
+            $.getJSON("../data/geojson/Jim_map_Elijah.geojson", (data) => {
+                L.geoJSON(data, {
+                    pointToLayer: function(feature, latlng) {
+                        return L.marker(latlng, geojsonMarkerOptions);
+                    }
+                }).addTo(mymap)
+            });
+        </script>
+    </div>
+</body>
+
+</html>

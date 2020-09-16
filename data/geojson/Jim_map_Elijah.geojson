@@ -1,0 +1,83 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.973333,
+          28.539722
+        ]
+      },
+      "properties": {
+        "name": "Mt. Sinai"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.840888,
+          31.244952
+        ]
+      },
+      "properties": {
+        "name": "Beer Sheba"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.536929,
+          32.35601
+        ]
+      },
+      "properties": {
+        "name": "Abel-meholah"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.330789,
+          32.555963
+        ]
+      },
+      "properties": {
+        "name": "Jezreel"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.291944,
+          33.513056
+        ]
+      },
+      "properties": {
+        "name": "Aram(Danascus)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.049789,
+          32.72935
+        ]
+      },
+      "properties": {
+        "name": "Mt. Carmel"
+      }
+    }
+  ]
+}
