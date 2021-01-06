@@ -1,0 +1,5 @@
+Authentification
+curl --request GET \\\n--url https://api.scripture.api.bible/v1/bibles \\\n--header 'api-key: 8c8de8fe0870481e33ad2d3d12495aa5'
+
+Get Bible
+curl --request GET \\\n--url https://api.scripture.api.bible/v1/bibles \\\n--header 'api-key: 8c8de8fe0870481e33ad2d3d12495aa5'

@@ -1,5 +1,0 @@
-"Root" means the location that's used for the Latitude and Longitude.
-> means the location surrounds the given point: Greece >Athens.
-< means the location is inside the given city: Gate of the Guard <Jerusalem.
-~ means the location is approximate.
---
