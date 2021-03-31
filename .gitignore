@@ -350,5 +350,8 @@ yarn-error.log
 # .yarn/cache and .pnp.* may be safely ignored, but you'll need to run yarn install
 # to regenerate them between each branch switch.
 # Uncomment the following lines if you're not using Zero-Installs:
-# .yarn/cache
-# .pnp.*
+.yarn/cache
+.pnp.*
+
+### My Data ###
+data/*
