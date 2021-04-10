@@ -354,4 +354,18 @@ yarn-error.log
 .pnp.*
 
 ### My Data ###
-data/*
+## Google Earth original Zip is too big.
+data/GoogleEarth/all.zip
+## Original data don't need to be add to repository.
+data/GoogleEarth/BiblicealPlaceOriginal.xml
+data/GoogleEarth/Original/
+data/topical/original/
+## This is only for Pastor JIm's preach
+data/places
+## ISO 639 Serires don't need to be add to repository
+data/ISO\ Countries
+
+## Images/Leaflet/mapbox are old ones.
+Images/
+Leaflet/
+mapbox/
