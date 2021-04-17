@@ -44,12 +44,9 @@
             foreach(libxml_get_errors() as $error) {
                 echo "\t" . $error->message;
             }
-        } else {
-            // 取得したXMLをJSONを経由して配列に格納
-            $json_XML = json_encode($xml);
-            $array_XML = json_decode($json_XML, true);
         }
-        array_walk_recursive($array_XML, "myCallback");
+        $xmlString = $xml->__toString();
+        $xsi = new SimpleXMLIterator($xmlString);
         ?>
     </div>
     <!-- SCRIPTS -->
