@@ -27,31 +27,62 @@
     </header>
     <div>
         <?php
-        function myCallback($value, $key) {
-            echo "The key $key has the value $value<br>";
+        function myPrint($string, $val) {
+            echo $string . $val . nl2br("<br>");
         }
-        define("XML_FILE", './BiblicealPlace.xml');
-        // libxmlエラーを抑制して、ユーザーによるエラー処理を許可する。
-        libxml_use_internal_errors(true);
-        // XMLファイルを一気に読み込む
-        if(file_exists(XML_FILE)) {
-            $xml = simplexml_load_file(XML_FILE);
-        } else {
-            exit("Feild to open XML_FILE");
-        }
-        if($xml === false) {
-            echo("Unable to read XML_FILE as an XML file<br>");
-            foreach(libxml_get_errors() as $error) {
-                echo "\t" . $error->message;
+
+        function    xml2arr($parsedXML) {
+            // prepare an array for return
+            $arr = array();
+            // Parse XML recursive
+            foreach($parsedXML as $key => $val) {
+                // if $key's $val is an object, set value to parameter and call itself.
+                myPrint('current key is ', $key);
+                if(is_object($parsedXML[$key])) {
+                    if(array_key_exists($key, $arr)) {
+                        $arr[$key] += xml2arr($val);
+                    } else {
+                        $arr[$key] = xml2arr($val);
+                    }
+                } else if(is_array($val)) {
+                    foreach($val as $k => $v) {
+                        if(is_object($v) || is_array($v)) {
+                            if(array_key_exists($key, $arr)) {
+                                if(array_key_exists($k, $arr[$key])) {
+                                    $arr[$key][$k] += xml2arr($v);
+                                } else {
+                                    $arr[$key][$k] = xml2arr($v);
+                                }
+                            } else {
+                                $arr[$key][$k] = xml2arr($v);
+                            }
+                        } else {
+                            if(array_key_exists($k, $arr[$key])) {
+                                $arr[$key][$k] += $v;
+                            } else {
+                                $arr[$key][$k] = $v;
+                            }
+                        }
+                    }
+                } else {
+                    if(array_key_exists($key, $arr)) {
+                        $arr[$key] += $val;
+                    } else {
+                        $arr[$key] = $val;
+                    }
+                }
             }
+            return $arr;
         }
-        $xmlString = $xml->__toString();
-        $xsi = new SimpleXMLIterator($xmlString);
+        // Read local XML file as simpleXMLObject
+        $simpleXMLObj = simplexml_load_file('./BiblicealPlace.xml');
+        //var_dump($simpleXMLObj);
+        // Convert XML to an array
+        $xmlArray = xml2arr($simpleXMLObj);
+        echo 'xmlArray count is' . count($xmlArray) . nl2br("<br>");
+        var_dump($xmlArray);
         ?>
     </div>
-    <!-- SCRIPTS -->
-    <!-- Example: <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
-    <!-- Example: <script src="my-script.js" async></script>-->
 </body>
 
 </html>
