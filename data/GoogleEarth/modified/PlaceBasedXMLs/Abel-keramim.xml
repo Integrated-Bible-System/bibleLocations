@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document>
+	<name>Abel-keramim</name>
+	<description>Judg 11:33</description>
+	<Placemark>
+		<name>Abel-keramim / Sahab</name>
+		<Point>
+			<coordinates>36.00486,31.87561</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Abel-keramim / Naur</name>
+		<Point>
+			<coordinates>35.82938,31.867559</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Abel-keramim / Tall al Umayri</name>
+		<Point>
+			<coordinates>35.8881,31.8686</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Abel-keramim / Merj Ekkeh</name>
+		<description>another name for Abila</description>
+		<Point>
+			<coordinates>35.855908,31.905663</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Abel-keramim / Khirbet es Suq</name>
+		<Point>
+			<coordinates>35.928768,31.87606</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Abel-keramim / Kom Yajuz</name>
+		<Point>
+			<coordinates>35.917261,32.030433</coordinates>
+		</Point>
+	</Placemark>
+</Document>
