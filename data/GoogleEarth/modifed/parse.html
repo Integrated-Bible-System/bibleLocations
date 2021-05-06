@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>Analize BiblicalPlace.XML</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+    <link rel="stylesheet" href=“./css/style.css” type="text/css">
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- コンテンツを配置 -->
+    <header>
+        <div>
+            <h1>Read XML file</h1>
+            <h2>target: BiblicealPlace.xml</h2>
+        </div>
+    </header>
+    <div>
+        <input id="Button_Get" type="button" value="Lord XML" onclick="getData();" />
+    </div>
+    <div>
+        <h2>Result</h2>
+    </div>
+    <div id="output"></div>
+    <script type="text/javascript">
+        function getData() {
+            var xmlhttp = new XMLHttpRequest();
+
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        var elem = document.getElementById("output");
+
+                        elem.innerHTML += "----- getElementsByTagName -----<br/>";
+                        var docelem = xmlhttp.responseXML.documentElement;
+                        var nodes = docelem.getElementsByTagName("name");
+                        for (i = 0; i < nodes.length; i++) {
+                            elem.innerHTML += nodes[i].tagName + ":" + nodes[i].textContent + "<br/>";
+                        }
+
+                        var nodes = docelem.getElementsByTagName("height");
+                        for (i = 0; i < nodes.length; i++) {
+                            elem.innerHTML += nodes[i].tagName + ":" + nodes[i].textContent + "<br/>";
+                        }
+
+                        var nodes = docelem.getElementsByTagName("weight");
+                        for (i = 0; i < nodes.length; i++) {
+                            elem.innerHTML += nodes[i].tagName + ":" + nodes[i].textContent + "<br/>";
+                        }
+                        elem.innerHTML += "----------<br/>";
+                    } else {
+                        alert("status = " + xmlhttp.status);
+                    }
+                }
+            }
+            xmlhttp.open("GET", "BiblicealPlace.xml");
+            xmlhttp.send();
+        }
+    </script>
+</body>
+
+</html>

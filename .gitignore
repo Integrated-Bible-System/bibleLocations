@@ -350,5 +350,22 @@ yarn-error.log
 # .yarn/cache and .pnp.* may be safely ignored, but you'll need to run yarn install
 # to regenerate them between each branch switch.
 # Uncomment the following lines if you're not using Zero-Installs:
-# .yarn/cache
-# .pnp.*
+.yarn/cache
+.pnp.*
+
+### My Data ###
+## Google Earth original Zip is too big.
+data/GoogleEarth/all.zip
+## Original data don't need to be add to repository.
+data/GoogleEarth/BiblicealPlaceOriginal.xml
+data/GoogleEarth/Original/
+data/topical/original/
+## This is only for Pastor JIm's preach
+data/places
+## ISO 639 Serires don't need to be add to repository
+data/ISO\ Countries
+
+## Images/Leaflet/mapbox are old ones.
+Images/
+Leaflet/
+mapbox/
