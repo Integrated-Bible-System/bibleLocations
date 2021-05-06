@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document>
+	<name>Abel-meholah</name>
+	<description>Judg 7:22, 1Kgs 4:12, 19:16</description>
+	<Placemark>
+		<name>Abel-meholah / Tell Abu Sus</name>
+		<Point>
+			<coordinates>35.56089,32.3743</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Abel-meholah / Tell el Hilu</name>
+		<Point>
+			<coordinates>35.50465,32.32656</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Abel-meholah / Tell el Maqlub</name>
+		<Point>
+			<coordinates>35.6823,32.40237</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Abel-meholah / Ras el Kharube</name>
+		<Point>
+			<coordinates>35.4933,32.1762</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Abel-meholah / Tell el Hamme</name>
+		<Point>
+			<coordinates>35.5994,32.4718</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Abel-meholah / Tall al Meqbarah</name>
+		<Point>
+			<coordinates>35.5905,32.4002</coordinates>
+		</Point>
+	</Placemark>
+</Document>

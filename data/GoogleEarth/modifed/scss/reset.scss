@@ -1,0 +1,1388 @@
+//@extend-elements
+//original selectors
+//*, *::before, *::after
+%extend_1 {
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+
+@charset "UTF-8";
+* {
+  @extend %extend_1;
+}
+*::before {
+  @extend %extend_1;
+}
+*::after {
+  @extend %extend_1;
+}
+@media(prefers-reduced-motion: reduce) {
+  * {
+    animation-delay: -1ms;
+    animation-duration: 1ms;
+    animation-iteration-count: 1;
+    background-attachment: initial;
+    scroll-behavior: auto;
+    //Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+    transition-delay: 0s;
+    //Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+    transition-duration: 0s;
+  }
+  *::before {
+    animation-delay: -1ms;
+    animation-duration: 1ms;
+    animation-iteration-count: 1;
+    background-attachment: initial;
+    scroll-behavior: auto;
+    //Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+    transition-delay: 0s;
+    //Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+    transition-duration: 0s;
+  }
+  *::after {
+    animation-delay: -1ms;
+    animation-duration: 1ms;
+    animation-iteration-count: 1;
+    background-attachment: initial;
+    scroll-behavior: auto;
+    //Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+    transition-delay: 0s;
+    //Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+    transition-duration: 0s;
+  }
+}
+html {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: inherit;
+  background-color: inherit;
+}
+body {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+div {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+span {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+applet {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+object {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+iframe {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border: none;
+}
+h1 {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: calc(1.375rem +1.5vw);
+}
+h2 {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: calc(1.325rem +0.9vw);
+}
+h3 {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: calc(1.3rem +0.6vw);
+}
+h4 {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: calc(1.275rem +0.3vw);
+}
+h5 {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 1.25rem;
+}
+h6 {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 1rem;
+}
+p {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+blockquote {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0 0 1rem;
+}
+pre {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: Fira Code, Cascadia Code, Consolas, Inconsolata, Monaco, Menlo, Noto Mono, Roboto Mono, Droid Sans Mono, Ubuntu Mono, Ubuntu Monospace, Source Code Pro, Oxygen Mono, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, monospace, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 1.05em;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.875em;
+  overflow: auto;
+  code {
+    font-size: inherit;
+    color: inherit;
+    //Instead of the line below you could use @include word-break($value)
+    word-break: normal;
+  }
+}
+a {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  cursor: pointer;
+  color: #3333e1;
+  background-color: transparent;
+  text-decoration: none;
+  touch-action: manipulation;
+  &:hover {
+    color: #3434e0;
+    text-decoration: underline;
+  }
+  &:focus {
+    outline: thin dotted;
+  }
+  &:not([href]) {
+    &:not(class) {
+      cursor: default;
+      color: inherit;
+      text-decoration: none;
+    }
+    &:not([class]):hover {
+      cursor: default;
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+  > code {
+    color: inherit;
+  }
+}
+abbr {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+acronym {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+address {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+big {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+cite {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+code {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: Fira Code, Cascadia Code, Consolas, Inconsolata, Monaco, Menlo, Noto Mono, Roboto Mono, Droid Sans Mono, Ubuntu Mono, Ubuntu Monospace, Source Code Pro, Oxygen Mono, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, monospace, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 1.05em;
+  font-size: 0.875em;
+  color: inherit;
+  word-wrap: break-word;
+}
+del {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+dfn {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+em {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+img {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+}
+ins {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+kbd {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: Fira Code, Cascadia Code, Consolas, Inconsolata, Monaco, Menlo, Noto Mono, Roboto Mono, Droid Sans Mono, Ubuntu Mono, Ubuntu Monospace, Source Code Pro, Oxygen Mono, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, monospace, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 1.05em;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.875em;
+  color: inherit;
+  background-color: inherit;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 0.2rem;
+  kbd {
+    padding: 0;
+    font-size: 1em;
+    font-weight: 700;
+  }
+}
+q {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+s {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+samp {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: Fira Code, Cascadia Code, Consolas, Inconsolata, Monaco, Menlo, Noto Mono, Roboto Mono, Droid Sans Mono, Ubuntu Mono, Ubuntu Monospace, Source Code Pro, Oxygen Mono, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, monospace, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 1.05em;
+}
+small {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-size: 0.875em;
+}
+strike {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+strong {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-weight: bolder;
+}
+sub {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  position: relative;
+  font-size: 0.75em;
+  line-height: 0;
+  vertical-align: baseline;
+  bottom: -0.25em;
+}
+sup {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  position: relative;
+  font-size: 0.75em;
+  line-height: 0;
+  vertical-align: baseline;
+  top: -0.5em;
+}
+tt {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+var {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+b {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-weight: bolder;
+}
+u {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+i {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+center {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+dl {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+dt {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-weight: 700;
+}
+dd {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+}
+ol {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  padding-left: 2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  ol {
+    margin-bottom: 0;
+  }
+  ul {
+    margin-bottom: 0;
+  }
+}
+ul {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  padding-left: 2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  ul {
+    margin-bottom: 0;
+  }
+  ol {
+    margin-bottom: 0;
+  }
+}
+li {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+fieldset {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  min-width: 0;
+  padding: 0.35em 0.75em 0.625em;
+  margin: 0;
+  border: 1px solid inherit;
+}
+form {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+label {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  touch-action: manipulation;
+  display: inline-block;
+}
+legend {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-size: calc(1.275rem +0.3vw);
+  line-height: inherit;
+  max-width: 100%;
+  white-space: normal;
+  + * {
+    clear: left;
+  }
+}
+table {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  caption-side: bottom;
+  border-collapse: collapse;
+  text-indent: 0;
+}
+caption {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: inherit;
+  text-align: left;
+}
+tbody {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+tfoot {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+thead {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+tr {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+th {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  text-align: inherit;
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+td {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+article {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  display: block;
+}
+aside {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  display: block;
+}
+canvas {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  vertical-align: middle;
+  display: inline;
+  display: inline-block;
+  zoom: 1;
+  max-width: 100%;
+}
+details {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  display: block;
+}
+embed {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+figure {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  display: block;
+  margin: 0 0 1rem;
+}
+figcaption {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  display: block;
+}
+footer {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  display: block;
+}
+header {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  display: block;
+}
+hgroup {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  display: block;
+}
+menu {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  display: block;
+}
+nav {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  display: block;
+  li {
+    list-style: none;
+    padding: 0;
+  }
+  li::before {
+    content: "​";
+  }
+}
+output {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  display: inline-block;
+}
+ruby {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+section {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  display: block;
+}
+summary {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  touch-action: manipulation;
+  display: list-item;
+  cursor: pointer;
+}
+time {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+mark {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  padding: 0.2em;
+  background-color: currentColor;
+}
+audio {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  vertical-align: middle;
+  display: inline;
+  display: inline-block;
+  zoom: 1;
+  max-width: 100%;
+  &:not([controls]) {
+    display: none;
+    height: 0;
+  }
+}
+video {
+  cursor: default;
+  tab-size: 4;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  vertical-align: middle;
+  display: inline;
+  display: inline-block;
+  zoom: 1;
+  max-width: 100%;
+}
+hr {
+  margin: 1rem 0;
+  color: inherit;
+  background-color: currentColor;
+  border: 0;
+  opacity: 0.25;
+  overflow: visible;
+  &:not([size]) {
+    height: 1px;
+  }
+}
+@media(min-width: 1200px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+}
+abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help;
+  text-decoration-skip-ink: none;
+}
+abbr[data-bs-original-title] {
+  text-decoration: underline dotted;
+  cursor: help;
+  text-decoration-skip-ink: none;
+}
+area {
+  touch-action: manipulation;
+}
+button {
+  touch-action: manipulation;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 0;
+  text-transform: none;
+  overflow: visible;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  background-color: transparent;
+  border: 1px solid WindowFrame;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  padding: 0.25em 0.375em;
+  text-transform: none;
+  &:focus {
+    outline: dotted 1px;
+  }
+  &:not(disabled) {
+    cursor: pointer;
+  }
+}
+input {
+  touch-action: manipulation;
+  height: auto;
+  max-width: 100%;
+  overflow: visible;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  background-color: transparent;
+  border: 1px solid WindowFrame;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  padding: 0.25em 0.375em;
+  &:-ms-input-placeholder {
+    opacity: 1;
+  }
+}
+select {
+  touch-action: manipulation;
+  height: auto;
+  max-width: 100%;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  background-color: transparent;
+  border: 1px solid WindowFrame;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  padding: 0.25em 0.375em;
+  text-transform: none;
+  text-transform: none;
+  word-wrap: normal;
+  &:not([multiple]):not([size]) {
+    background-image: "data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='4'%3E%3Cpath d='M4 0h6L7 4'/%3E%3C/svg%3E";
+  }
+}
+textarea {
+  touch-action: manipulation;
+  height: auto;
+  max-width: 100%;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  background-color: transparent;
+  border: 1px solid WindowFrame;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  padding: 0.25em 0.375em;
+  overflow: auto;
+  resize: vertical;
+  vertical-align: top;
+}
+[tabindex] {
+  touch-action: manipulation;
+}
+svg {
+  vertical-align: middle;
+  &:not([fill]) {
+    fill: currentColor;
+  }
+  &:not(:root) {
+    overflow: hidden;
+  }
+}
+optgroup {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+[role=button] {
+  cursor: pointer;
+}
+::-ms-expand {
+  display: none;
+}
+[list]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+::-webkit-file-upload-button {
+  font: inherit;
+}
+@media(max-width: 1200px) {
+  legend {
+    font-size: 1.5rem;
+  }
+}
+dialog {
+  background-color: inherit;
+  border: solid;
+  color: inherit;
+  display: block;
+  height: fit-content;
+  left: 0;
+  margin: auto;
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  width: fit-content;
+  &:not([open]) {
+    display: none;
+  }
+}
+::-webkit-datetime-edit-fields-wrapper {
+  padding: 0;
+}
+::-webkit-datetime-edit-text {
+  padding: 0;
+}
+::-webkit-datetime-edit-minute {
+  padding: 0;
+}
+::-webkit-datetime-edit-hour-field {
+  padding: 0;
+}
+::-webkit-datetime-edit-day-field {
+  padding: 0;
+}
+::-webkit-datetime-edit-month-field {
+  padding: 0;
+}
+::-webkit-datetime-edit-year-field {
+  padding: 0;
+}
+::-webkit-inner-spin-button {
+  height: auto;
+}
+::-webkit-outer-spin-button {
+  height: auto;
+}
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+input::-webkit-input-placeholder {
+  opacity: 1;
+}
+input::-moz-placeholder {
+  opacity: 1;
+}
+input::placeholder {
+  opacity: 1;
+}
+[type=search] {
+  outline-offset: -2px;
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: content-box;
+}
+input[type=search]::-webkit-search-cancel-button {
+}
+input[type=search]::-webkit-search-decoration {
+}
+input[type=search]::-webkit-search-results-button {
+}
+input[type=search]::-webkit-search-results-decoration {
+}
+[type=tel] {
+  direction: ltr;
+}
+[type=url] {
+  direction: ltr;
+}
+[type=email] {
+  direction: ltr;
+}
+[type=number] {
+  direction: ltr;
+}
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+::-moz-ui-invalid {
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: none;
+}
+::-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+template {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+[aria-busy=true] {
+  cursor: progress;
+}
+[aria-controls] {
+  cursor: pointer;
+}
+[aria-disabled=true] {
+  cursor: not-allowed;
+}
+[disabled] {
+  cursor: not-allowed;
+}
+[aria-hidden=false][hidden=false] {
+  display: initial;
+  &:not(:focus) {
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+  }
+}
+[tabindex="-1"]:focus:not(:focus-visible) {
+  outline: 0;
+}
+[type=button]:not(disabled) {
+  cursor: pointer;
+}
+[type=reset]:not(disabled) {
+  cursor: pointer;
+}
+[type=submit]:not(disabled) {
+  cursor: pointer;
+}
