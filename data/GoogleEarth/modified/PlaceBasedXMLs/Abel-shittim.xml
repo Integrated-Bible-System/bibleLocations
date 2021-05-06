@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document>
+	<name>Abel-shittim</name>
+	<list>
+		<aka>Acacia Meadow</aka>
+		<aka>Abel Acacia Grove</aka>
+	</list>
+	<description>Num 33:49</description>
+	<Placemark>
+		<name>Tall el Hammam</name>
+		<type>place</type>
+		<description>another name for Shittim</description>
+		<Point>
+			<coordinates>35.671782,31.839483</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Tall Kafrayn</name>
+		<type>place</type>
+		<description>another name for Shittim</description>
+		<Point>
+			<coordinates>35.65296,31.85055</coordinates>
+		</Point>
+	</Placemark>
+</Document>

@@ -56,4 +56,11 @@
 			</outerBoundaryIs>
 		</Polygon>
 	</Placemark>
+	<Placemark>
+		<name>Abarim</name>
+		<type>place</type>
+		<Point>
+			<coordinates>35.7152,31.7539</coordinates>
+		</Point>
+	</Placemark>
 </Document>

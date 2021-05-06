@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Document>
 	<name>Abel-beth-maacah</name>
-	<aka>Abel Beth Maakah, Abel of Beth Maacah, Abel Beth Maachah, Abel</aka>
+	<list>
+		<aka>Abel Beth Maakah</aka>
+		<aka>Abel of Beth Maacah</aka>
+		<aka>Abel Beth Maachah</aka>
+		<aka>Abel</aka>
+	</list>
 	<description>2Sam 20:14, 20:15, 20:18, 1Kgs 15:20, 2Kgs 15:29, 2Chr 16:4</description>
 	<Placemark>
 		<name>Tel Abel Beth Maacah</name>

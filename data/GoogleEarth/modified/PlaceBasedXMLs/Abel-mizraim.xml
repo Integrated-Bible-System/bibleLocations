@@ -3,20 +3,23 @@
 	<name>Abel-mizraim</name>
 	<description>Gen 50:11</description>
 	<Placemark>
-		<name>Abel-mizraim / near the mouth of the Jordan River</name>
+		<name>near the mouth of the Jordan River</name>
+		<type>place</type>
 		<Point>
 			<coordinates>35.530445,31.914888</coordinates>
 		</Point>
 	</Placemark>
 	<Placemark>
-		<name>Abel-mizraim / Deir Hajla</name>
+		<name>Deir Hajla</name>
+		<type>place</type>
 		<description>another name for Beth-hoglah</description>
 		<Point>
 			<coordinates>35.501161,31.820379</coordinates>
 		</Point>
 	</Placemark>
 	<Placemark>
-		<name>Abel-mizraim / Ain Haljah</name>
+		<name>Ain Haljah</name>
+		<type>place</type>
 		<description>another name for Beth-hoglah</description>
 		<Point>
 			<coordinates>35.512222,31.828056</coordinates>
